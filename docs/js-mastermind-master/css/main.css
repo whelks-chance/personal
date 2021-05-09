@@ -167,6 +167,7 @@ hr {
   border-radius: 3px 0 0 3px;
   padding: 15px 5px;
   font-size: 0;
+  width: 85%;
 }
 
 .guess { margin-top: 15px; }
@@ -177,10 +178,11 @@ hr {
   width: 40px;
   height: 40px;
   vertical-align: middle;
+  margin-left: 5%;
 }
 
 .code .socket + .socket,
-.guess .socket + .socket { margin-left: 10px; }
+.guess .socket + .socket { margin-left: 15%; }
 
 .code {
   border-bottom: 2px solid #c7bf8d;
@@ -208,10 +210,12 @@ hr {
 #hints {
   vertical-align: bottom;
   display: inline-block;
-  padding: 15px 20px;
+  padding: 15px 20px 15px 5%;
   background-color: #E3DCB5;
   border-radius: 0 3px 3px 0;
   font-size: 0;
+  width: 10%;
+  margin-left: 3%;
 }
 
 .hint {
@@ -285,13 +289,13 @@ hr {
 }
 
 #modalOverlay.lost {
-  background-color: rgba(226, 45, 45, .5);
+  /*background-color: rgba(226, 45, 45, .5);*/
   visibility: visible;
   opacity: 1;
 }
 
 #modalOverlay.lost #modalMessage {
-  background-color: #E22D2D;
+  /*background-color: #E22D2D;*/
   border: 5px solid #fff;
 }
 
@@ -301,13 +305,13 @@ hr {
   display: block;
   /*text-align: center;*/
     background-color: #E3DCB5;
-  width: fit-content;
+  /*width: fit-content;*/
 
   font-size: 0;
 }
 
 #options button + button {
-  margin-left: 10px;
+  margin-left: 6%;
 }
 
 @-webkit-keyframes bounceIn {

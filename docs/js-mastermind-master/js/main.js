@@ -164,7 +164,7 @@
       document.getElementById('restartGame').onclick = newGame;
       document.getElementById('hideModal').onclick = hideModal;
     } else
-      modalMessage.innerHTML = '<h2>You failed...</h2> <p>What a shame... Look on the bright side - you weren\'t even close.</p> <button class="large" id="hideModal">OK</button> <button id="restartGame" class="large primary">Restart</button>';
+      modalMessage.innerHTML = '<h2>You failed...</h2> <p>What a shame...</p> <button class="large" id="hideModal">OK</button> <button id="restartGame" class="large primary">Restart</button>';
       document.getElementById('restartGame').onclick = newGame;
       document.getElementById('hideModal').onclick = hideModal;
   }
