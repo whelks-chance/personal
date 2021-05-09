@@ -182,7 +182,7 @@ hr {
 }
 
 .code .socket + .socket,
-.guess .socket + .socket { margin-left: 8%; }
+.guess .socket + .socket { margin-left: 5%; }
 
 .code {
   border-bottom: 2px solid #c7bf8d;
