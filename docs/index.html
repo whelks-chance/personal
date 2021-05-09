@@ -1,93 +1,566 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>About me</title>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="https://unpkg.com/98.css"/>
+<html lang="en" dir="ltr">
 
-    <style>
-        body {
-            background: #c0c0c0
-        }
-    </style>
+<head>
+    <meta charset="utf-8">
+    <title>Win95.CSS</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <meta author="Alex B" />
+    <meta property="og:image" content="win95.css-master/assets/preview.png" />
+
+    <link rel="shortcut icon" href="win95.css-master/assets/icons/computer-3.png" type="image/png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="win95.css-master/assets/win95.css">
+
 </head>
 
-<body>
+<style>
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+    .minimize {
+        width: 1.5em;
+        height: 1.5em;
+        background-repeat: no-repeat;
+        background-position: bottom 3px left 4px;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='6' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 0h6v2H0z'/%3E%3C/svg%3E");
+    }
+</style>
 
-<div class="window" style="width: max-content">
-    <div class="title-bar">
-        <div class="title-bar-text">Hello world</div>
-        <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
-        </div>
+
+
+<body class="windows-scrollbar">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-95">
+    <a class="navbar-brand" href="#">
+        <img src="win95.css-master/assets/icons/computer-3.png"> Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#quote-card">Quote Card</a>
+                    <a class="dropdown-item" href="#mastermind">Mastermind</a>
+                </div>
+            </li>
+        </ul>
     </div>
+</nav>
 
-    <div class="window-body">
-        <p>
-            My Github profile is here : <a href="https://github.com/whelks-chance" target="_blank">https://github.com/whelks-chance</a>
-        </p>
+<!-- Header -->
 
-        <p>
-            Whelk? What? : <a href="http://www.angelfire.com/ca3/tomsnyder/hg-3-16.html" target="_blank">http://www.angelfire.com/ca3/tomsnyder/hg-3-16.html</a>
-        </p>
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Hello world</h1>
+    <p class="lead">A whelk's chance in a supernova,” repeated Ford without losing momentum. ... “What's a whelk got to do with a supernova?” said Arthur. “It doesn't,” said Ford levelly, “stand a chance in one.</p>
+</div>
 
-        <p>
-            I tweet sometimes : <a href="https://twitter.com/whelks_chance" target="_blank">https://twitter.com/whelks_chance</a>
-        </p>
+<!-- Not header -->
 
-        <p>
-            Very, very rarely, I blog stuff : <a href="https://whelks-chance.blogspot.com/" target="_blank">https://whelks-chance.blogspot.com/</a>
-        </p>
+<div class="container">
+    <div class="row mb-5">
+        <!--            <div class="col-md-8 text-center">-->
+        <!--                <img src="win95.css-master/assets/macbook-mockup.png" class="img-fluid">-->
+        <!--            </div>-->
 
-        <p>
-            I'm a software engineer at SIMBA Chain : <a href="https://simbachain.com/" target="_blank">https://simbachain.com/</a>
-        </p>
-        <p>
-            We do stuff with blockchains. <a href="https://simbachain.com/solutions/smart-contract-as-a-service/" target="_blank">https://simbachain.com/solutions/smart-contract-as-a-service/</a>
-        </p>
-
-<!--        <pre><code>Previously, I was an RSE : <a-->
-<!--                href="https://www.cardiff.ac.uk/data-innovation-research-institute/people/research-software-engineers"-->
-<!--                target="_blank">https://www.cardiff.ac.uk/data-innovation-research-institute/people/research-software-engineers</a></code></pre>-->
-        <p>
-            Previously, I was an RSE : <a
-                href="https://www.cardiff.ac.uk/data-innovation-research-institute/people/research-software-engineers"
-                target="_blank">https://www.cardiff.ac.uk/data-innovation-research-institute/people/research-software-engineers</a>
-        </p>
-
-        <p>
-            at DIRI : <a href="https://www.cardiff.ac.uk/data-innovation-research-institute" target="_blank">https://www.cardiff.ac.uk/data-innovation-research-institute</a>
-        </p>
-
-        <p>
-            at Cardiff University : <a href="https://www.cardiff.ac.uk/people/view/797528-harvey-ian" target="_blank">https://www.cardiff.ac.uk/people/view/797528-harvey-ian</a>
-        </p>
-
-        <p>
-            I was also on this project : <a href="http://housingevidence.ac.uk/" target="_blank">http://housingevidence.ac.uk/</a>
-        </p>
-
-        <p>
-            Where I built this : <a href="https://cache-web-live.cf.ac.uk/" target="_blank">https://cache-web-live.cf.ac.uk/</a>
-        </p>
-
-        <p>
-            Previously, I built this : <a href="https://data.wiserd.ac.uk/"
-                                          target="_blank">https://data.wiserd.ac.uk</a>
-        </p>
-
-        <p>
-            and this : <a href="https://illustrationarchive.cf.ac.uk/" target="_blank">https://illustrationarchive.cf.ac.uk</a>
-        </p>
-
-        <p>
-            Sometimes I do work in close proximity to this : <a href="https://www.dbyz.co.uk" target="_blank">https://www.dbyz.co.uk/</a>
-        </p>
+        <div class="col-md-4 my-auto">
+            <div class="card" id="dragit">
+                <div class="card-header" style="display: flex">
+                    <h4 class="my-0 font-weight-normal">This is draggable</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>For no good reason</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-auto">
+            <div id="app"></div>
+            <script src="https://unpkg.com/webamp"></script>
+            <script>new Webamp().renderWhenReady(app);</script>
+        </div>
     </div>
 </div>
 
-</body>
-</html>
+<!-- Bootstrap cards -->
 
+<div class="container" id="page-content">
+    <div class="card-deck mb-3 text-center">
+        <div class="card square mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Github profile</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">Bad <small class="text-muted">code</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Worse documentation</li>
+                    <li>Zero support</li>
+                    <li>Probably doesn't build</li>
+                    <li>Highly unlikely to run</li>
+                </ul>
+                <a target="_blank" href="https://github.com/whelks-chance" class="btn btn-lg btn-block">Okay, sure</a>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Whelk? What?</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">Don't <small class="text-muted">panic</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>It's a Hitch Hikers Guide To The Galaxy thing</li>
+                    <li>Radio series</li>
+                    <li>Books</li>
+                    <li>BBC TV series</li>
+                </ul>
+                <a target="_blank" href="http://www.angelfire.com/ca3/tomsnyder/hg-3-16.html" class="btn btn-lg btn-block">Interesting</a>
+            </div>
+        </div>
+        <div class="card w95 mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">I tweet sometimes</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">Zero <small class="text-muted">value</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Largely retweeting tech stuff</li>
+                    <li>Or being depressed about politics</li>
+                    <li>Or following cat and dog accounts</li>
+                </ul>
+                <a target="_blank" href="https://twitter.com/whelks_chance" class="btn btn-lg btn-block">Go on then</a>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header header-inactive">
+                <h4 class="my-0 font-weight-normal">Blog</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">0.5 <small class="text-muted">/ year</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Cider making</li>
+                    <li>Bar building</li>
+                    <li>Dumping ground for things to copy/paste</li>
+                    <li>Sometimes cathartic to type</li>
+                </ul>
+                <a target="_blank" href="https://whelks-chance.blogspot.com/" class="btn btn-lg btn-block">Cider?</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-deck mb-3 text-center">
+        <div class="card square mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Work</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">SIMBA <small class="text-muted">Chain</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>I'm a software engineer</li>
+                    <li></li>
+                    <li>We do stuff with blockchains.</li>
+                    <li>Backend coding mostly</li>
+                </ul>
+                <a target="_blank" href="https://simbachain.com/" class="btn btn-lg btn-block">Okay, sure</a>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">I was an RSE</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">. <small class="text-muted">.</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Research Software Engineering</li>
+                    <li>
+                        <a target="_blank" href="https://www.cardiff.ac.uk/data-innovation-research-institute" class="">DIRI</a>
+                    </li>
+                    <li>COMSCI</li>
+                    <li>Cardiff University 2005-2019</li>
+                </ul>
+                <a target="_blank" href="https://society-rse.org/about/" class="btn btn-lg btn-block">More about RSEs</a>
+            </div>
+        </div>
+        <div class="card w95 mb-4">
+            <div class="card-header ">
+                <h4 class="my-0 font-weight-normal">Previous Projects</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">. <small class="text-muted">.</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>
+                        <a target="_blank" href="http://housingevidence.ac.uk/" class="">Housing Evidence</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://cache-web-live.cf.ac.uk/" class="">CaCHE</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://data.wiserd.ac.uk/map" class="">WISERD Dataportal</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://illustrationarchive.cf.ac.uk/" class="">Illustration Archive</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">DbyZ</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">. <small class="text-muted">.</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Sometimes I do work in close proximity to this</li>
+                    <li>Kieran Evans</li>
+                    <li>David Rogers</li>
+                    <li>Coding and stuff</li>
+                </ul>
+                <a target="_blank" href="https://www.dbyz.co.uk" class="btn btn-lg btn-block">DbyZ</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Forms -->
+<div id="quote-card" class="container" style="padding-top: 5em">
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">The whole quote in context</h4>
+        </div>
+        <div class="card-body" style="overflow-y: scroll; height:100px;">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Open the book
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="mastermind" class="container" style="padding-top: 5em">
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Mastermind</h4>
+        </div>
+        <div class="card-body">
+<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-user="yaylenny" data-slug-hash="pJMepR" style="height: 80vh; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mastermind --- the classic code breaking game">
+  <span>See the Pen <a href="https://codepen.io/yaylenny/pen/pJMepR">
+  Mastermind --- the classic code breaking game</a> by Lenny Mahnke (<a href="https://codepen.io/yaylenny">@yaylenny</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Forms</h4>
+        </div>
+        <div class="card-body">
+            <p>Normal progress bar</p>
+            <div class="progress card">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <div class="progress">
+                <div class="progress-bar " role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br>
+            <p>Class progress-bar-blocks</p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-blocks" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"><img src="win95.css-master/assets/icons/envelope_closed-1.png" class="icon-16-4"> Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-95" id="inputEmail3">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label"><img src="win95.css-master/assets/icons/keys-0.png" class="icon-16-4"> Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-95" id="inputPassword3">
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    First radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Second radio
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                                <label class="form-check-label" for="gridRadios3">
+                                    Third disabled radio
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <div class="col-sm-2">Checkbox</div>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1">
+                                Example checkbox
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">The book</h5>
+                <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="overflow-y: scroll; height:66vh;">
+                <div style="color: #333333; border-radius: 0.5em; padding: 1em; background-color: antiquewhite; font-family: Serif">
+                    <p>
+                        “No,” said Ford firmly. “We must go to the party in order to drink a lot and dance with girls.”
+                    </p>
+
+                    <p>
+                        “But haven’t you understood everything I …?”
+                    </p>
+
+                    <p>
+                        “Yes,” said Ford, with a sudden and unexpected fierceness, “I’ve understood it all perfectly well. That’s why I want to have as many drinks and dance with as many girls as possible while there are still any left. If everything you’ve shown us is true…”
+                    </p>
+
+                    <p>
+                        “True? Of course it’s true.”
+                    </p>
+
+                    <p>
+                        “…then we don’t stand a whelk’s chance in a supernova.”
+                    </p>
+
+                    <p>
+                        “A what?” said Arthur sharply again. He had been following the conversation doggedly up to this point, and was keen not to lose the thread now.
+                    </p>
+
+                    <p>
+                        “A whelk’s chance in a supernova,” repeated Ford without losing momentum. “The…”
+                    </p>
+
+                    <p>
+                        “What’s a whelk got to do with a supernova?” said Arthur.
+                    </p>
+
+                    <p>
+                        “It doesn’t,” said Ford levelly, “stand a chance in one.”
+                    </p>
+
+                    <p>
+                        He paused to see if the matter was now cleared up. The freshly puzzled looks clambering across Arthur’s face told him that it wasn’t.
+                    </p>
+
+                    <p>
+                        “A supernova,” said Ford as quickly and as clearly as he could, “is a star which explodes at almost half the speed of light and burns with the brightness of a billion suns and then collapses as a super-heavy neutron star. It’s a star which burns up other stars, got it? Nothing stands a chance in a supernova.”
+                    </p>
+
+                    <p>
+                        “I see,” said Arthur.
+                    </p>
+
+                    <p>
+                        “The…”
+                    </p>
+
+                    <p>
+                        “So why a whelk particularly?”
+                    </p>
+
+                    <p>
+                        “Why not a whelk? Doesn’t matter.”
+                    </p>
+
+                    <p>
+                        Arthur accepted this, and Ford continued, picking up his early fierce momentum as best he could.
+                    </p>
+
+                    <p>
+                        “The point is,” he said, “that people like you and me, Slartibartfast, and Arthur — particularly and especially Arthur — are just dilletantes, eccentrics, layabouts, fartarounds, if you like.”
+                    </p>
+
+                    <p>
+                        Slartibartfast frowned, partly in puzzlement and partly in umbrage. He started to speak.
+                    </p>
+
+                    <p>
+                        “— …” is as far as he got.
+                    </p>
+
+                    <p>
+                        “We’re not obsessed by anything, you see,” insisted Ford.
+                    </p>
+
+                    <p>
+                        “…”
+                    </p>
+
+                    <p>
+                        “And that’s the deciding factor. We can’t win against obsession. They care, we don’t. They win.”
+                    </p>
+
+                    <p>
+                        “I care about lots of things,” said Slartibartfast, his voice trembling partly with annoyance, but partly also with uncertainty.
+                    </p>
+
+                    <p>
+                        “Such as?”
+                    </p>
+
+                    <p>
+                        “Well,” said the old man, “life, the Universe. Everything, really. Fjords.”
+                    </p>
+
+                    <p>
+                        “Would you die for them?”
+                    </p>
+
+                    <p>
+                        “Fjords?” blinked Slartibartfast in surprise. “No.”
+                    </p>
+
+                    <p>
+                        “Well then.”
+                    </p>
+
+                    <p>
+                        “Wouldn’t see the point, to be honest.”
+                    </p>
+
+                    <p>
+                        “And I still can’t see the connection,” said Arthur, “with whelks.”
+                    </p>
+
+                    <p>
+                        Ford could feel the conversation slipping out of his control, and refused to be sidetracked by anything at this point.
+                    </p>
+
+                    <p>
+                        “The point is,” he hissed, “that we are not obsessive people, and we don’t stand a chance against …”
+                    </p>
+
+                    <p>
+                        “Except for your sudden obsession with whelks,” pursued Arthur, “which I still haven’t understood.”
+                    </p>
+
+                    <p>
+                        “Will you please leave whelks out of it?”
+                    </p>
+
+                    <p>
+                        “I will if you will,” said Arthur. “You brought the subject up.”
+                    </p>
+
+                    <p>
+                        “It was an error,” said Ford, “forget them. The point is this.”
+                    </p>
+
+                    <p>
+                        He leant forward and rested his forehead on the tips of his fingers.
+                    </p>
+
+                    <p>
+                        “What was I talking about?” he said wearily.
+                    </p>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="taskbar" style="position: fixed">
+    <div class="row" style="margin-right: 0px;">
+        <div class="col-8">
+            <a target="_blank" href="//alex-b.me" class="btn start-button"><img src="win95.css-master/assets/icons/users-1.png" class="icon-16">Theme Author</a>
+            <a target="_blank" href="https://github.com/AlexBSoft/win95.css" class="btn start-button"><img src="win95.css-master/assets/icons/directory_folder_options-5.png" class="icon-16"> Theme GitHub</a>
+        </div>
+        <div class="col-4 time">By Alex B</div>
+    </div>
+
+</footer>
+
+<!-- Scripts -->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+<script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+    jQuery( document ).ready(function() {
+        jQuery('#dragit').draggable();
+        console.log( "ready!" );
+    });
+</script>
+
+</body>
+
+</html>
