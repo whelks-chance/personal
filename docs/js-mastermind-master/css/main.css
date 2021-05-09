@@ -167,7 +167,7 @@ hr {
   border-radius: 3px 0 0 3px;
   padding: 15px 5px;
   font-size: 0;
-  width: 80%;
+  width: 75%;
 }
 
 .guess { margin-top: 15px; }
@@ -182,7 +182,7 @@ hr {
 }
 
 .code .socket + .socket,
-.guess .socket + .socket { margin-left: 15%; }
+.guess .socket + .socket { margin-left: 10%; }
 
 .code {
   border-bottom: 2px solid #c7bf8d;
