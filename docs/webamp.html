@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Whelks Chance in a Supernova</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <meta author="IanH" />
+    <meta property="og:image" content="" />
+
+    <link rel="shortcut icon" href="win95.css-master/assets/icons/computer-3.png" type="image/png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="win95.css-master/assets/win95.css">
+    <!--    <link rel="stylesheet" href="js-mastermind-master/css/normalize.css">-->
+    <link rel="stylesheet" href="js-mastermind-master/css/main.css">
+</head>
+
+<style>
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .blink {
+        animation: 2s linear infinite condemned_blink_effect;
+    }
+
+    @keyframes condemned_blink_effect {
+        0% {
+            visibility: hidden;
+        }
+        50% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: visible;
+        }
+    }
+</style>
+
+
+
+<body class="windows-scrollbar">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-95">
+    <a class="navbar-brand" href="#">
+        <img alt="computer icon" src="win95.css-master/assets/icons/computer-3.png"> Whelks Chance</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contents
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <a href="webamp.html" class="dropdown-item">Webamp</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Header -->
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Webamp</h1>
+    <p class="lead">
+    </p>
+</div>
+
+<!-- Not header -->
+
+<div class="container" id="page-content" style="margin-top: 5em">
+    <div id="app"></div>
+    <script src="https://unpkg.com/webamp"></script>
+    <script>new Webamp().renderWhenReady(app);</script>
+</div>
+
+
+<!-- Footer -->
+<footer class="taskbar" style="position: fixed">
+    <div class="row" style="margin-right: 0px;">
+        <div class="col-8">
+            <a target="_blank" href="//alex-b.me" class="btn start-button"><img src="win95.css-master/assets/icons/users-1.png" class="icon-16">Theme Author</a>
+            <a target="_blank" href="https://github.com/AlexBSoft/win95.css" class="btn start-button"><img src="win95.css-master/assets/icons/directory_folder_options-5.png" class="icon-16"> Theme GitHub</a>
+        </div>
+        <div id="clock" class="col-4 time">00<span class="blink">:</span>00</div>
+    </div>
+
+</footer>
+
+<!-- Scripts -->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+<script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

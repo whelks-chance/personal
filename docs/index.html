@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Win95.CSS</title>
+    <title>Whelks Chance in a Supernova</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
-    <meta author="Alex B" />
-    <meta property="og:image" content="win95.css-master/assets/preview.png" />
+    <meta author="IanH" />
+    <meta property="og:image" content="" />
 
     <link rel="shortcut icon" href="win95.css-master/assets/icons/computer-3.png" type="image/png">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="win95.css-master/assets/win95.css">
-
+    <!--    <link rel="stylesheet" href="js-mastermind-master/css/normalize.css">-->
+    <link rel="stylesheet" href="js-mastermind-master/css/main.css">
 </head>
 
 <style>
@@ -29,6 +30,22 @@
         background-position: bottom 3px left 4px;
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='6' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 0h6v2H0z'/%3E%3C/svg%3E");
     }
+
+    .blink {
+        animation: 2s linear infinite condemned_blink_effect;
+    }
+
+    @keyframes condemned_blink_effect {
+        0% {
+            visibility: hidden;
+        }
+        50% {
+            visibility: hidden;
+        }
+        100% {
+            visibility: visible;
+        }
+    }
 </style>
 
 
@@ -38,7 +55,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light navbar-95">
     <a class="navbar-brand" href="#">
-        <img src="win95.css-master/assets/icons/computer-3.png"> Navbar</a>
+        <img alt="computer icon" src="win95.css-master/assets/icons/computer-3.png"> Whelks Chance</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -49,11 +66,12 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
+                    Contents
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#quote-card">Quote Card</a>
                     <a class="dropdown-item" href="#mastermind">Mastermind</a>
+                    <a href="webamp.html" class="dropdown-item">Webamp</a>
                 </div>
             </li>
         </ul>
@@ -71,10 +89,6 @@
 
 <div class="container">
     <div class="row mb-5">
-        <!--            <div class="col-md-8 text-center">-->
-        <!--                <img src="win95.css-master/assets/macbook-mockup.png" class="img-fluid">-->
-        <!--            </div>-->
-
         <div class="col-md-4 my-auto">
             <div class="card" id="dragit">
                 <div class="card-header" style="display: flex">
@@ -93,11 +107,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 my-auto">
-            <div id="app"></div>
-            <script src="https://unpkg.com/webamp"></script>
-            <script>new Webamp().renderWhenReady(app);</script>
         </div>
     </div>
 </div>
@@ -242,14 +251,13 @@
 
 </div>
 
-
 <!-- Forms -->
 <div id="quote-card" class="container" style="padding-top: 5em">
     <div class="card mb-4">
         <div class="card-header">
             <h4 class="my-0 font-weight-normal">The whole quote in context</h4>
         </div>
-        <div class="card-body" style="overflow-y: scroll; height:100px;">
+        <div class="card-body">
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Open the book
@@ -259,17 +267,200 @@
 </div>
 
 <div id="mastermind" class="container" style="padding-top: 5em">
-    <div class="card mb-4">
-        <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Mastermind</h4>
-        </div>
-        <div class="card-body">
-<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-user="yaylenny" data-slug-hash="pJMepR" style="height: 80vh; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mastermind --- the classic code breaking game">
-  <span>See the Pen <a href="https://codepen.io/yaylenny/pen/pJMepR">
-  Mastermind --- the classic code breaking game</a> by Lenny Mahnke (<a href="https://codepen.io/yaylenny">@yaylenny</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <div class="card square">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Mastermind</h4>
+                </div>
+                <div class="card-body">
+                    <button id="newGame" class="green">Restart</button>
+
+                    <!--            <p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-user="yaylenny" data-slug-hash="pJMepR" style="height: 80vh; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mastermind -&#45;&#45; the classic code breaking game">-->
+                    <!--  <span>See the Pen <a href="https://codepen.io/yaylenny/pen/pJMepR">-->
+                    <!--  Mastermind -&#45;&#45; the classic code breaking game</a> by Lenny Mahnke (<a href="https://codepen.io/yaylenny">@yaylenny</a>)-->
+                    <!--  on <a href="https://codepen.io">CodePen</a>.</span>-->
+                    <!--            </p>-->
+                    <!--            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>-->
+
+                    <div class="">
+                        <div id="guesses">
+                            <div class="code row">
+                                <div class="secret socket">?</div>
+                                <div class="secret socket">?</div>
+                                <div class="secret socket">?</div>
+                                <div class="secret socket">?</div>
+                            </div>
+                            <div class="guess">
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                            </div>
+                            <div class="guess">
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                            </div>
+                            <div class="guess">
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                            </div>
+                            <div class="guess">
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                            </div>
+                            <div class="guess">
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                            </div>
+                            <div class="guess">
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                            </div>
+                            <div class="guess">
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                            </div>
+                            <div class="guess">
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                                <div class="socket"></div>
+                            </div>
+                        </div>
+
+                        <div id="hints">
+                            <div class="hint">
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                            </div>
+                            <div class="hint">
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                            </div>
+                            <div class="hint">
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                            </div>
+                            <div class="hint">
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                            </div>
+                            <div class="hint">
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                            </div>
+                            <div class="hint">
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                            </div>
+                            <div class="hint">
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                            </div>
+                            <div class="hint">
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="js-hint-socket socket"></div>
+                                    <div class="js-hint-socket socket"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--    <div id="instructions">-->
+                    <!--      <h3>How to play</h3>-->
+                    <!--      <p><strong>Goal:</strong> Guess the pattern, in both order and color</p>-->
+                    <!--      <p>Insert your guess sequence into the empty sockets</p>-->
+                    <!--      <p>Feedback is provided on the right side in the form of black and white pegs.-->
+                    <!--        <ul>-->
+                    <!--          <li>Black peg corresponds to one peg from your color sequence that is both the right color and in the right position</li>-->
+                    <!--          <li>White peg corresponds to one peg from your color sequence that is the right color but NOT in the right position</li>-->
+                    <!--        </ul>-->
+                    <!--      </p>-->
+                    <!--    </div>-->
+
+                    <div id="options" class="">
+                        <button value="1" id="green" class="option green"></button>
+                        <button value="2" id="purple" class="option purple"></button>
+                        <button value="3" id="red" class="option red"></button>
+                        <button value="4" id="yellow" class="option yellow"></button>
+                        <button value="5" id="blue" class="option blue"></button>
+                        <button value="6" id="brown" class="option brown"></button>
+                        <button id="delete" class="">&#8672;</button>
+                    </div>
+                </div>
+
+                <div id="modalOverlay">
+                    <div id="modalMessage">
+                        <button class="large">OK</button>
+                        <button class="large primary">Restart</button>
+                    </div>
+                </div>
+
+                <footer>
+                    <p><small>Built with <a href="https://github.com/klomontes" target="_blank">klomontes</a> by &#9829</small></p>
+                </footer>
+
+                <script src="js-mastermind-master/js/main.js"></script>
+            </div>
         </div>
     </div>
 </div>
@@ -542,7 +733,7 @@
             <a target="_blank" href="//alex-b.me" class="btn start-button"><img src="win95.css-master/assets/icons/users-1.png" class="icon-16">Theme Author</a>
             <a target="_blank" href="https://github.com/AlexBSoft/win95.css" class="btn start-button"><img src="win95.css-master/assets/icons/directory_folder_options-5.png" class="icon-16"> Theme GitHub</a>
         </div>
-        <div class="col-4 time">By Alex B</div>
+        <div id="clock" class="col-4 time">00<span class="blink">:</span>00</div>
     </div>
 
 </footer>
@@ -558,6 +749,8 @@
     jQuery( document ).ready(function() {
         jQuery('#dragit').draggable();
         console.log( "ready!" );
+
+
     });
 </script>
 
