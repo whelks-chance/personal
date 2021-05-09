@@ -178,11 +178,11 @@ hr {
   width: 40px;
   height: 40px;
   vertical-align: middle;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 .code .socket + .socket,
-.guess .socket + .socket { margin-left: 10%; }
+.guess .socket + .socket { margin-left: 8%; }
 
 .code {
   border-bottom: 2px solid #c7bf8d;
