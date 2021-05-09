@@ -450,13 +450,13 @@ footer a {
   }
   #guesses,
   #hints {
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
   }
   #instructions {
     display: none;
   }
   #options {
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
     bottom: 0;
     background-color: #ece5ce;
