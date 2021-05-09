@@ -175,7 +175,7 @@ hr {
 .option,
 .code .socket,
 .guess .socket {
-  width: 13%;
+  width: 12%;
   height: 40px;
   vertical-align: middle;
   margin-left: 2%;
@@ -311,7 +311,7 @@ hr {
 }
 
 #options button + button {
-  margin-left: 6%;
+  margin-left: 3%;
 }
 
 @-webkit-keyframes bounceIn {
